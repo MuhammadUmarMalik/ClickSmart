@@ -1,13 +1,24 @@
 {
   "name": "clicksmart-landing",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
   "type": "module",
+  "description": "ClickSmart - Professional Service Marketplace Landing Page",
+  "keywords": ["clicksmart", "marketplace", "services", "react", "typescript", "vite"],
+  "author": "ClickSmart Team",
+  "license": "MIT",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "lint:fix": "eslint . --fix",
+    "preview": "vite preview",
+    "type-check": "tsc --noEmit",
+    "build:analyze": "npm run build && npx vite-bundle-analyzer dist/assets/*.js",
+    "clean": "rimraf dist",
+    "prebuild": "npm run clean && npm run type-check",
+    "deploy:netlify": "npm run build && netlify deploy --prod",
+    "deploy:vercel": "npm run build && vercel --prod"
   },
   "dependencies": {
     "@types/react-router-dom": "^5.3.3",
@@ -29,9 +40,26 @@
     "eslint-plugin-react-refresh": "^0.4.20",
     "globals": "^16.3.0",
     "postcss": "^8.5.6",
+    "rimraf": "^6.0.1",
     "tailwindcss": "^4.1.11",
     "typescript": "~5.8.3",
     "typescript-eslint": "^8.35.1",
     "vite": "^7.0.4"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }
