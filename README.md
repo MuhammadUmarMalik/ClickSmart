@@ -157,8 +157,8 @@ This project is licensed under the MIT License.
 
 ## 📞 Support
 
-For support, email support@clicksmart.com or create an issue in the repository.
+For support, email umarmalik.cs711@gmail.com or create an issue in the repository.
 
 ---
 
-Built with ❤️ by the ClickSmart team
+Built with ❤️ by the Muhammad Umar Malik
