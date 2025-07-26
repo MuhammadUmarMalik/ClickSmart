@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ChevronDown, ChevronUp, ExternalLink, Star } from 'lucide-react';
+import { ChevronDown, ExternalLink, Star } from 'lucide-react';
 import { SERVICE_CATEGORIES } from '../../constants';
 import { handleNavClick } from '../../utils/scrollUtils';
 import Section from '../ui/Section';
@@ -12,10 +12,9 @@ const Services: React.FC = () => {
     setExpandedCategory(expandedCategory === categoryId ? null : categoryId);
   };
 
-  const handleGetQuote = (serviceName: string) => {
-    // Scroll to contact form and pre-populate service
+  const handleGetQuote = () => {
+    // Scroll to contact form
     handleNavClick('#contact');
-    // Could also trigger a modal or form state update here
   };
 
   return (
@@ -89,7 +88,7 @@ const Services: React.FC = () => {
                       <button 
                         onClick={(e) => {
                           e.stopPropagation();
-                          handleGetQuote(service.name);
+                          handleGetQuote();
                         }}
                         className="flex items-center gap-1 text-blue-600 hover:text-blue-700 text-sm md:text-base font-medium bg-blue-50 px-3 py-1.5 md:px-4 md:py-2 rounded-lg hover:bg-blue-100 transition-all duration-200 transform hover:scale-105"
                       >

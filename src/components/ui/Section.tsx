@@ -1,5 +1,5 @@
 import React from 'react';
-import { SectionProps } from '../../types';
+import type { SectionProps } from '../../types';
 
 const Section: React.FC<SectionProps> = ({ children, className = '', id }) => {
   return (

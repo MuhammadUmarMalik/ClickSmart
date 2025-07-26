@@ -1,4 +1,4 @@
-import { NavItem, Feature, ServiceCategory } from '../types';
+import type { NavItem, Feature, ServiceCategory } from '../types';
 
 export const NAVIGATION_ITEMS: NavItem[] = [
   { label: 'Home', href: '#home' },
