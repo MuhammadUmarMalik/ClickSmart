@@ -33,7 +33,7 @@ const Contact: React.FC = () => {
     {
       icon: Phone,
       title: 'Phone',
-      details: ['(+92-312-254-2578', '+92-312-254-2578'],
+      details: ['+92 300 1234567', '+92 321 9876543'],
       available: true,
       color: 'text-blue-600',
       bgColor: 'bg-blue-100'
@@ -83,8 +83,8 @@ const Contact: React.FC = () => {
 
     if (!formData.phone.trim()) {
       newErrors.phone = 'Phone number is required';
-    } else if (!/^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/.test(formData.phone)) {
-      newErrors.phone = 'Phone number is invalid';
+    } else if (!/^(\+92|0092|92|0)?[0-9]{10}$/.test(formData.phone.replace(/[-.\s]/g, ''))) {
+      newErrors.phone = 'Please enter a valid Pakistani phone number';
     }
 
     if (!formData.service) {
@@ -144,7 +144,7 @@ const Contact: React.FC = () => {
   };
 
   const handleCallNow = () => {
-    window.location.href = 'tel:1-800-254-2578';
+    window.location.href = 'tel:+923001234567';
   };
 
   const handleEmailClick = (email: string) => {
@@ -206,7 +206,7 @@ const Contact: React.FC = () => {
               Need Immediate Assistance?
             </h4>
             <p className="text-blue-700 mb-4">
-              For urgent service requests or emergencies, call us directly at 1-800-CLICKSMART.
+              For urgent service requests or emergencies, call us directly at +92 300 1234567.
             </p>
             <button 
               onClick={handleCallNow}
@@ -323,7 +323,7 @@ const Contact: React.FC = () => {
                     className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 ${
                       errors.phone ? 'border-red-500 bg-red-50' : 'border-gray-300'
                     }`}
-                    placeholder="(555) 123-4567"
+                    placeholder="+92 300 1234567"
                   />
                   {errors.phone && (
                     <div className="flex items-center mt-1 text-red-600 text-sm">
