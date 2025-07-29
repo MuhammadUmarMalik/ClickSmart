@@ -33,7 +33,7 @@ const Contact: React.FC = () => {
     {
       icon: Phone,
       title: 'Phone',
-      details: ['1-800-CLICKSMART', '1-800-254-2578'],
+      details: ['(+92-312-254-2578', '+92-312-254-2578'],
       available: true,
       color: 'text-blue-600',
       bgColor: 'bg-blue-100'

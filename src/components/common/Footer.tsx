@@ -105,7 +105,7 @@ const Footer: React.FC = () => {
               <div className="space-y-3 md:space-y-4">
                 <div className="flex items-center text-gray-300">
                   <Phone size={16} className="mr-3 text-blue-400 flex-shrink-0" />
-                  <span className="text-sm md:text-base">1-800-CLICKSMART (1-800-254-2578)</span>
+                  <span className="text-sm md:text-base">+92 300 1234567</span>
                 </div>
                 <div className="flex items-center text-gray-300">
                   <Mail size={16} className="mr-3 text-blue-400 flex-shrink-0" />
